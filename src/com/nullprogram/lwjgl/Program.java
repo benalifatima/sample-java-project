@@ -16,6 +16,7 @@ public class Program {
     @Getter
     private Set<Shader> shaders = new HashSet<Shader>();
 
+    //TODO
     public Program add(Shader shader) {
         if (shaders.add(shader)) {
             GL20.glAttachShader(handle, shader.getHandle());
@@ -23,6 +24,7 @@ public class Program {
         return this;
     }
 
+    //TODO
     public Program detach(Shader shader) {
         if (shaders.remove(shader)) {
             GL20.glDetachShader(shader.getHandle());
@@ -43,6 +45,7 @@ public class Program {
         }
     }
 
+    //TYODO
     public void dispose() {
         if (!disposed) {
             GL20.glDeleteProgram(handle);
