@@ -45,7 +45,10 @@ public class Program {
         }
     }
 
-    //TYODO
+    public void run() {
+        GL20.glUseProgram(handle);
+    }
+
     public void dispose() {
         if (!disposed) {
             GL20.glDeleteProgram(handle);
